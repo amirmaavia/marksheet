@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+   
+<body>
+ 
+  <style>
+
+
+    body{
+      
+	/*background-color: #536691;*/
+	background-image: url('abc.jpg');
+    min-height: 100vh;
+    z-index: -10;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-size: 1.3rem;		    
+}
+table{
+  margin-top: 100px;
+}
+
+    
+  td{
+    text-align: center;
+    border: 1px solid;
+  }
+  
+  </style>
+<!-- <div class="container">
+  <img class="img-fluid d-block w-100" src="about.png" alt="asdsa"> -->
+<div class= "container text-center text-gray headerset">
+  
+  <div class="row rowsetting">
+      
+         
+                   
+      </div>
+  <div class="image image-fluid">
+   <center><table style="border: 1px solid blue; height: 100%; width: 100%; background: none; "></center>
+    <tr>
+      <tr>
+        <center><td colspan="4" id="pic" style="font-family: Chilanka; font-size: 30px;" >
+        </td></center></tr>
+      
+      <td colspan="4"><center>MARKSHEET</center></td>
+    </tr>
+  
+  <th colspan="2">SUBJECT</th>
+  <th colspan="1">TOTAL MARKS</th>
+  <th colspan="1">GIVEN MARKS</th>
+  <tr> 
+    <td colspan="2">URDU</td>
+    <td colspan="1">100</td>
+    <td colspan="1" id="u"></td>
+   
+  </tr>
+  <tr> 
+    <td colspan="2">ENG</td>
+    <td colspan="1">100</td>
+    <td colspan="1" id="e"></td>
+  </tr>
+  <tr> 
+    <td colspan="2">MATH</td>
+    <td colspan="1">100</td>
+    <td colspan="1" id="m"></td>
+  </tr>
+  <tr> 
+    <td colspan="2">ISLAMIAT</td>
+    <td colspan="1">100</td>
+    <td colspan="1" id="i"></td>
+  </tr>
+  <tr> 
+    <td colspan="2">SCIENCE</td>
+    <td colspan="1">100</td>
+    <td colspan="1" id="s"></td>
+  </tr>
+  <th colspan="2" >PERCETAGE:</th>
+  <th id="per" ></th>
+   <tr>  <th colspan="2">GRADE</th>
+    <th id="Gr"></th>
+  </tr> 
+
+  </table>
+</div>
+</div>
+</div>
+ <script>
+  
+    var name = prompt("Whats your name")
+    var newname = name.toUpperCase()
+
+    for (var i = 0; ; i){
+    var Urdu = parseInt (prompt ("given marks in Urdu out of 100"));
+    if(Urdu <=  100){
+     break
+    }
+    
+    else{
+alert("invalid value")
+    }
+    }
+    
+    for (var i = 0; ; i){
+    var Eng = parseInt (prompt ("given marks in English out of 100"));
+    if(Eng <=  100){
+     break
+    }
+    
+    else{
+alert("invalid value")
+    }
+    }
+    for (var i = 0; ; i){
+    var islamiat = parseInt (prompt ("given marks in Islamiat out of 100"));
+    if(islamiat <=  100){
+     break
+    }
+    
+    else{
+alert("invalid value")
+    }
+    }
+    for (var i = 0; ; i){
+    var science = parseInt (prompt ("given marks in Science out of 100"));
+    if(science <=  100){
+     break
+    }
+    
+    else{
+alert("invalid value")
+    }
+    }
+    for (var i = 0; ; i){
+    var math = parseInt (prompt ("given marks in Math out of 100"));
+    if(math <=  100){
+     break
+    }
+    
+    else{
+alert("invalid value")
+    }
+    }
+    
+    
+       
+            var Total = parseInt (Eng+math+Urdu+science+islamiat);
+                   
+                    alert("The Total Marks = " + Total)
+                     var Percentage = Total/500*100;
+                     alert("Congratulation!! You Scored" + " " +Percentage);
+
+
+var Grade;
+                     var Grade 
+                    if (Percentage >= 80 && Percentage <= 100){
+                     Grade = "A+1" 
+                    }
+                    else if(Percentage >=70 && Percentage <= 79){
+                    Grade = "A"
+                    }
+                    else if(Percentage >= 60 && Percentage <= 69){
+                    Grade = "B"
+                    }
+                    else if(Percentage >=50 && Percentage <= 59){
+                    Grade = "C"
+                    }
+                    else if(Percentage >=40 && Percentage <= 49){
+                    Grade = "D"
+                    }
+                    else if(Percentage >= 33 && Percentage <= 30){
+                    Grade = "E"
+                    }
+                    else if (Percentage >= 0 &&  Percentage <= 32 ){
+                    Grade = "F"
+                    }
+                    else{
+                     Grade =  "INVALID VALUE"
+                    }
+                    
+             
+    
+
+        alert(  "Marksheet\n" +  "1. URDU = " +Urdu+" \n2. ENG =" +Eng+ "\n3. MATH =" +math+ "\n4. ISLAMIAT =" +islamiat+ "\n5. SCIENCE =" +science+ "\n\t\t THE TOTAL MARKS:" + Total + " /500" + "\n\t\t PERCENTAGE:" +Percentage+ "%" + "\n\t\t" + "GRADE:"+ Grade)
+        window.document.getElementById("pic").innerHTML =  newname;
+    window.document.getElementById("e").innerHTML = Eng;
+    window.document.getElementById("m").innerHTML = math;
+    window.document.getElementById("i").innerHTML =  islamiat;
+    window.document.getElementById("s").innerHTML =  science;
+    window.document.getElementById("u").innerHTML =  Urdu;
+    window.document.getElementById("per").innerHTML = Math.round(Percentage) +"%";
+     window.document.getElementById("Gr").innerHTML = Grade;
+  
+  
+  
+
+
+
+                    </script> 
+                    
+                       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+                       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+                       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
